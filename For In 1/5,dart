@@ -1,0 +1,16 @@
+/* Escribir un programa que almacene en una lista los números del 1 al 10 y los muestre 
+por pantalla en orden inverso separados por comas.
+*/
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  Random random = new Random();
+  List<int> numerosAlAzar =
+      List.filled(10, 0).map((n) => random.nextInt(10) + 1).toList()..sort((a, b) => b.compareTo(a));
+
+  for (int numero in numerosAlAzar) {
+    print("--> $numero");
+  }
+}
